@@ -9,11 +9,21 @@ import time
 
 yf.pdr_override()
 
-# Variables
-tickers = si.tickers_sp500()
-tickers = [
-    item.replace(".", "-") for item in tickers
-]  # Yahoo Finance uses dashes instead of dots
+# # Variables
+# # Tickers get
+# tickers = si.tickers_nasdaq()
+# tickers = [
+#     item.replace(".", "-") for item in tickers
+# ]  # Yahoo Finance uses dashes instead of dots
+
+# # Save list to csv
+# dict = {"Symbol": tickers}
+# df = pd.DataFrame(dict)
+# df.to_csv("./tickers_nasdaq.csv")
+
+data = pd.read_csv("./tickers_above20.csv", header=0)
+tickers = list(data.Symbol)
+
 index_name = "^GSPC"  # S&P 500
 start_date = datetime.datetime.now() - datetime.timedelta(days=365)
 end_date = datetime.date.today()
@@ -54,7 +64,8 @@ for ticker in tickers:
 
 # Creating dataframe of only top 30%
 rs_df = pd.DataFrame(
-    list(zip(tickers, returns_multiples)), columns=["Ticker", "Returns_multiple"]
+    list(zip(tickers, returns_multiples)),
+    columns=["Ticker", "Returns_multiple"],
 )
 rs_df["RS_Rating"] = rs_df.Returns_multiple.rank(pct=True) * 100
 rs_df = rs_df[rs_df.RS_Rating >= rs_df.RS_Rating.quantile(0.70)]
