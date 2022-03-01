@@ -50,7 +50,7 @@ for ticker in tickers:
     # Download historical data as CSV for each stock (makes the process faster)
     df = pdr.get_data_yahoo(ticker, start_date, end_date)
     df.to_csv(f"stocks/{ticker}.csv")
-    # df = pd.read_csv(f"{ticker}.csv")
+    # df = pd.read_csv(f"stocks/{ticker}.csv", index_col=0)
 
     # Calculating returns relative to the market (returns multiple)
     df["Percent Change"] = df["Adj Close"].pct_change()
