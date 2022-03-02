@@ -16,12 +16,16 @@ yf.pdr_override()
 #     item.replace(".", "-") for item in tickers
 # ]  # Yahoo Finance uses dashes instead of dots
 
-# # Save list to csv
+# # # Save list to csv
+# data = pd.read_csv("./america_2022-03-02.csv", header=0)
+# tickers = [
+#     item.replace(".", "-") for item in data.Ticker
+# ]  # Yahoo Finance uses dashes instead of dots
 # dict = {"Symbol": tickers}
 # df = pd.DataFrame(dict)
-# df.to_csv("./tickers_nasdaq.csv")
+# df.to_csv("./tickers_above10.csv")
 
-data = pd.read_csv("./tickers_above20.csv", header=0)
+data = pd.read_csv("./tickers_above10.csv", header=0)
 tickers = list(data.Symbol)
 
 index_name = "^GSPC"  # S&P 500
