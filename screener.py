@@ -6,6 +6,7 @@ import yfinance as yf
 import pandas as pd
 import datetime
 import time
+from util.stat import compute_rs_rating
 
 yf.pdr_override()
 
@@ -17,15 +18,15 @@ yf.pdr_override()
 # ]  # Yahoo Finance uses dashes instead of dots
 
 # # # Save list to csv
-# data = pd.read_csv("./america_2022-03-02.csv", header=0)
+# data = pd.read_csv("./america_2022-03-05.csv", header=0)
 # tickers = [
 #     item.replace(".", "-") for item in data.Ticker
 # ]  # Yahoo Finance uses dashes instead of dots
-# dict = {"Symbol": tickers}
+# dict = {"Symbol": tickers, "Sector": data.Sector, "Industry": data.Industry}
 # df = pd.DataFrame(dict)
-# df.to_csv("./tickers_above10.csv")
+# df.to_csv("./tickers_above10-03-05a.csv")
 
-data = pd.read_csv("./tickers_above10.csv", header=0)
+data = pd.read_csv("./tickers_above10-03-05.csv", header=0)
 tickers = list(data.Symbol)
 
 index_name = "^GSPC"  # S&P 500
@@ -43,6 +44,8 @@ exportList = pd.DataFrame(
     ]
 )
 returns_multiples = []
+sectors = []
+industries = []
 
 # Index Returns
 index_df = pdr.get_data_yahoo(index_name, start_date, end_date)
@@ -50,26 +53,35 @@ index_df["Percent Change"] = index_df["Adj Close"].pct_change()
 index_return = (index_df["Percent Change"] + 1).cumprod()[-1]
 
 # Find top 30% performing stocks (relative to the S&P 500)
-for ticker in tickers:
+for index, row in data.iterrows():
     # Download historical data as CSV for each stock (makes the process faster)
-    df = pdr.get_data_yahoo(ticker, start_date, end_date)
-    df.to_csv(f"stocks/{ticker}.csv")
-    # df = pd.read_csv(f"stocks/{ticker}.csv", index_col=0)
+    # df = pdr.get_data_yahoo(ticker, start_date, end_date)
+    # df.to_csv(f"stocks/{ticker}.csv")
+    df = pd.read_csv(f"stocks/{row['Symbol']}.csv", index_col=0)
 
     # Calculating returns relative to the market (returns multiple)
     df["Percent Change"] = df["Adj Close"].pct_change()
     stock_return = (df["Percent Change"] + 1).cumprod()[-1]
+    # print(333, df, stock_return)
 
     returns_multiple = round((stock_return / index_return), 2)
     returns_multiples.extend([returns_multiple])
 
-    print(f"Ticker: {ticker}; Returns Multiple against S&P 500: {returns_multiple}\n")
-    time.sleep(1)
+    ## add extra column
+    sectors.extend([row.Sector])
+    industries.extend([row.Industry])
+    # data = compute_rs_rating(df)
+    # if data:
+    #     print(9, data.get("rs1"), data.get("rs2"))
+
+    print(f"Ticker: {row.Symbol};")
+    print("Returns Multiple against S&P 500: {returns_multiple}\n")
+    # time.sleep(1)
 
 # Creating dataframe of only top 30%
 rs_df = pd.DataFrame(
-    list(zip(tickers, returns_multiples)),
-    columns=["Ticker", "Returns_multiple"],
+    list(zip(tickers, returns_multiples, sectors, industries)),
+    columns=["Ticker", "Returns_multiple", "Sector", "Industry"],
 )
 rs_df["RS_Rating"] = rs_df.Returns_multiple.rank(pct=True) * 100
 rs_df = rs_df[rs_df.RS_Rating >= rs_df.RS_Rating.quantile(0.70)]
@@ -91,6 +103,8 @@ for stock in rs_stocks:
         low_of_52week = round(min(df["Low"][-260:]), 2)
         high_of_52week = round(max(df["High"][-260:]), 2)
         RS_Rating = round(rs_df[rs_df["Ticker"] == stock].RS_Rating.tolist()[0])
+        Sector = rs_df[rs_df["Ticker"] == stock].Sector.tolist()[0]
+        Industry = rs_df[rs_df["Ticker"] == stock].Industry.tolist()[0]
 
         try:
             moving_average_200_20 = df["SMA_200"][-20]
@@ -137,6 +151,8 @@ for stock in rs_stocks:
                     "200 Day MA": moving_average_200,
                     "52 Week Low": low_of_52week,
                     "52 week High": high_of_52week,
+                    "Sector": Sector,
+                    "Industry": Industry,
                 },
                 ignore_index=True,
             )
