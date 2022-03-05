@@ -1,12 +1,12 @@
 # Imports
 from pandas_datareader import data as pdr
 from yahoo_fin import stock_info as si
-from pandas import ExcelWriter
 import yfinance as yf
 import pandas as pd
 import datetime
-import time
-from util.stat import compute_rs_rating
+
+# import time
+# from util.stat import compute_rs_rating
 
 yf.pdr_override()
 
@@ -46,6 +46,7 @@ exportList = pd.DataFrame(
 returns_multiples = []
 sectors = []
 industries = []
+latestPercentageChanges = []
 
 # Index Returns
 index_df = pdr.get_data_yahoo(index_name, start_date, end_date)
@@ -62,14 +63,15 @@ for index, row in data.iterrows():
     # Calculating returns relative to the market (returns multiple)
     df["Percent Change"] = df["Adj Close"].pct_change()
     stock_return = (df["Percent Change"] + 1).cumprod()[-1]
-    # print(333, df, stock_return)
 
     returns_multiple = round((stock_return / index_return), 2)
     returns_multiples.extend([returns_multiple])
 
-    ## add extra column
+    # add extra column
     sectors.extend([row.Sector])
     industries.extend([row.Industry])
+    latestPercentageChange = (df["Percent Change"].iloc[-1] * 100).round(2)
+    latestPercentageChanges.extend([latestPercentageChange])
     # data = compute_rs_rating(df)
     # if data:
     #     print(9, data.get("rs1"), data.get("rs2"))
@@ -80,8 +82,22 @@ for index, row in data.iterrows():
 
 # Creating dataframe of only top 30%
 rs_df = pd.DataFrame(
-    list(zip(tickers, returns_multiples, sectors, industries)),
-    columns=["Ticker", "Returns_multiple", "Sector", "Industry"],
+    list(
+        zip(
+            tickers,
+            returns_multiples,
+            sectors,
+            industries,
+            latestPercentageChanges,
+        )
+    ),
+    columns=[
+        "Ticker",
+        "Returns_multiple",
+        "Sector",
+        "Industry",
+        "Daily_change",
+    ],
 )
 rs_df["RS_Rating"] = rs_df.Returns_multiple.rank(pct=True) * 100
 rs_df = rs_df[rs_df.RS_Rating >= rs_df.RS_Rating.quantile(0.70)]
@@ -105,6 +121,7 @@ for stock in rs_stocks:
         RS_Rating = round(rs_df[rs_df["Ticker"] == stock].RS_Rating.tolist()[0])
         Sector = rs_df[rs_df["Ticker"] == stock].Sector.tolist()[0]
         Industry = rs_df[rs_df["Ticker"] == stock].Industry.tolist()[0]
+        Daily_change = rs_df[rs_df["Ticker"] == stock].Daily_change.tolist()[0]
 
         try:
             moving_average_200_20 = df["SMA_200"][-20]
@@ -153,6 +170,7 @@ for stock in rs_stocks:
                     "52 week High": high_of_52week,
                     "Sector": Sector,
                     "Industry": Industry,
+                    "Daily_change": Daily_change,
                 },
                 ignore_index=True,
             )
@@ -162,7 +180,5 @@ for stock in rs_stocks:
         print(f"Could not gather data on {stock}")
 
 exportList = exportList.sort_values(by="RS_Rating", ascending=False)
+exportList.to_csv("ScreenOutput.csv")
 print("\n", exportList)
-writer = ExcelWriter("ScreenOutput.xlsx")
-exportList.to_excel(writer, "Sheet1")
-writer.save()
