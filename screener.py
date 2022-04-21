@@ -41,6 +41,10 @@ exportList = pd.DataFrame(
         "200 Day MA",
         "52 Week Low",
         "52 week High",
+        "Sector",
+        "Industry",
+        "Daily_change",
+        "returnsMultiple",
     ]
 )
 returns_multiples = []
@@ -56,9 +60,9 @@ index_return = (index_df["Percent Change"] + 1).cumprod()[-1]
 # Find top 30% performing stocks (relative to the S&P 500)
 for index, row in data.iterrows():
     # Download historical data as CSV for each stock (makes the process faster)
-    # df = pdr.get_data_yahoo(ticker, start_date, end_date)
-    # df.to_csv(f"stocks/{ticker}.csv")
-    df = pd.read_csv(f"stocks/{row['Symbol']}.csv", index_col=0)
+    df = pdr.get_data_yahoo(row["Symbol"], start_date, end_date)
+    df.to_csv(f"stocks/{row['Symbol']}.csv")
+    # df = pd.read_csv(f"stocks/{row['Symbol']}.csv", index_col=0)
 
     # Calculating returns relative to the market (returns multiple)
     df["Percent Change"] = df["Adj Close"].pct_change()
@@ -99,8 +103,9 @@ rs_df = pd.DataFrame(
         "Daily_change",
     ],
 )
+rs_df["Returns_multiple"] = rs_df.Returns_multiple
 rs_df["RS_Rating"] = rs_df.Returns_multiple.rank(pct=True) * 100
-rs_df = rs_df[rs_df.RS_Rating >= rs_df.RS_Rating.quantile(0.70)]
+# rs_df = rs_df[rs_df.RS_Rating >= rs_df.RS_Rating.quantile(0.70)]
 
 # Checking Minervini conditions of top 30% of stocks in given list
 rs_stocks = rs_df["Ticker"]
@@ -122,6 +127,7 @@ for stock in rs_stocks:
         Sector = rs_df[rs_df["Ticker"] == stock].Sector.tolist()[0]
         Industry = rs_df[rs_df["Ticker"] == stock].Industry.tolist()[0]
         Daily_change = rs_df[rs_df["Ticker"] == stock].Daily_change.tolist()[0]
+        returnsMultiple = rs_df[rs_df["Ticker"] == stock].Returns_multiple.tolist()[0]
 
         try:
             moving_average_200_20 = df["SMA_200"][-20]
@@ -149,15 +155,19 @@ for stock in rs_stocks:
         # Condition 7: Current Price is within 25% of 52 week high
         condition_7 = currentClose >= (0.75 * high_of_52week)
 
+        # Condition 8: Current Price is within 25% of 52 week high
+        condition_8 = currentClose >= (0.70 * high_of_52week)
+
         # If all conditions above are true, add stock to exportList
         if (
-            condition_1
-            and condition_2
-            and condition_3
-            and condition_4
-            and condition_5
-            and condition_6
-            and condition_7
+            # condition_1
+            # and condition_2
+            # and condition_3
+            # and condition_4
+            # and condition_5
+            # and condition_6
+            # and condition_7
+            condition_8
         ):
             exportList = exportList.append(
                 {
@@ -171,6 +181,7 @@ for stock in rs_stocks:
                     "Sector": Sector,
                     "Industry": Industry,
                     "Daily_change": Daily_change,
+                    "returnsMultiple": returnsMultiple,
                 },
                 ignore_index=True,
             )

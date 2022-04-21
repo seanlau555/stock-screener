@@ -1,0 +1,185 @@
+,Stock,RS_Rating,50 Day MA,150 Day Ma,200 Day MA,52 Week Low,52 week High,Sector,Industry,Daily_change
+183,ZIM,100,64.82,53.65,49.74,18.88,75.33,Transportation,Marine Shipping,2.54
+6,AMR,100,77.26,58.94,49.96,11.13,132.7,Energy Minerals,Coal,8.37
+20,BTU,100,14.18,13.57,12.39,2.61,27.28,Energy Minerals,Coal,2.59
+83,HPK,100,18.6,14.04,13.11,6.0,26.0,Industrial Services,Contract Drilling,6.9
+102,LXU,100,12.08,9.56,8.44,2.96,20.1,Process Industries,Chemicals: Agricultural,-0.79
+29,CLMT,100,14.78,11.75,10.48,4.32,17.43,Process Industries,Industrial Specialties,1.65
+22,CEIX,100,26.37,25.53,23.62,8.65,38.44,Energy Minerals,Coal,0.38
+167,UAN,100,97.7,78.68,73.46,26.52,118.1,Process Industries,Chemicals: Agricultural,-0.95
+150,SM,99,34.4,29.22,27.32,14.79,43.69,Energy Minerals,Oil & Gas Production,-2.25
+146,SBLK,99,23.27,20.41,19.67,13.26,32.0,Transportation,Marine Shipping,7.0
+141,RRC,99,20.6,19.96,18.79,8.47,27.97,Energy Minerals,Oil & Gas Production,-2.21
+140,ROCC,99,31.14,27.3,25.87,11.81,42.5,Energy Minerals,Oil & Gas Production,9.23
+168,VET,99,16.03,11.53,10.66,5.51,23.93,Energy Minerals,Oil & Gas Production,6.52
+101,LPI,99,70.82,67.52,67.51,26.51,99.26,Energy Minerals,Oil & Gas Production,-5.12
+100,LNTH,99,31.28,27.85,27.28,19.14,54.1,Health Technology,Medical Specialties,-1.85
+91,ISEE,99,14.61,14.57,12.83,5.6,19.32,Health Technology,Biotechnology,-0.85
+175,WFRD,99,30.48,25.4,23.18,10.0,35.58,Industrial Services,Oilfield Services/Equipment,0.94
+82,HMHC,99,17.86,15.59,14.37,5.53,21.07,Consumer Services,Other Consumer Services,0.19
+66,FLNG,99,21.17,18.78,17.34,8.2,26.26,Energy Minerals,Oil & Gas Production,3.76
+56,ERF,99,11.68,9.31,8.64,4.71,14.59,Energy Minerals,Oil & Gas Production,0.07
+178,WLL,99,72.12,63.07,59.81,31.26,90.89,Energy Minerals,Oil & Gas Production,-1.77
+53,DVN,99,51.53,40.94,37.43,20.14,63.1,Energy Minerals,Oil & Gas Production,-0.68
+126,OAS,99,133.89,115.28,109.22,55.3,158.28,Energy Minerals,Oil & Gas Production,-3.33
+0,AA,99,66.85,53.97,49.66,27.11,92.32,Non-Energy Minerals,Aluminum,-3.55
+13,ARCH,99,106.6,90.74,82.69,39.02,163.99,Energy Minerals,Coal,0.87
+14,ARLP,99,13.52,11.12,10.02,5.33,15.66,Energy Minerals,Coal,1.35
+12,AR,99,20.24,18.31,17.17,8.64,27.13,Energy Minerals,Oil & Gas Production,-0.76
+121,NOG,98,23.39,21.3,20.58,11.4,29.1,Energy Minerals,Oil & Gas Production,-2.66
+71,GDEN,98,49.29,48.83,47.78,23.65,59.32,Consumer Services,Casinos/Gaming,1.59
+46,CVE,98,14.62,11.88,11.15,7.16,16.84,Energy Minerals,Integrated Oil,1.28
+113,MRO,98,20.04,16.19,15.31,9.7,25.7,Energy Minerals,Oil & Gas Production,-0.99
+25,CF,98,73.57,61.57,58.67,43.19,100.52,Process Industries,Chemicals: Agricultural,-2.52
+114,MTDR,98,44.16,38.98,37.43,21.55,57.5,Energy Minerals,Oil & Gas Production,-3.31
+87,ICL,98,10.11,8.67,8.21,5.74,12.21,Process Industries,Chemicals: Agricultural,-7.03
+78,HCC,98,29.1,24.96,23.14,15.07,41.45,Energy Minerals,Coal,3.01
+161,TRGP,98,59.3,52.87,50.41,29.95,72.03,Energy Minerals,Oil Refining/Marketing,-2.35
+58,ESTE,98,12.92,10.78,10.72,6.44,15.27,Energy Minerals,Integrated Oil,0.71
+34,CNQ,98,50.91,41.97,39.98,28.5,61.83,Energy Minerals,Oil & Gas Production,0.2
+116,MUR,98,31.68,27.2,26.01,14.91,39.41,Energy Minerals,Oil & Gas Production,-2.08
+75,GSL,98,24.85,22.89,21.53,12.52,29.28,Transportation,Marine Shipping,1.91
+74,GOGL,98,9.64,8.71,8.6,6.61,13.09,Transportation,Marine Shipping,6.38
+30,CLR,98,52.47,46.7,43.8,24.4,62.97,Energy Minerals,Oil & Gas Production,-2.55
+123,NUE,98,115.19,111.33,108.04,64.32,140.25,Non-Energy Minerals,Steel,-4.5
+50,DAC,98,85.06,77.86,75.36,37.1,102.95,Transportation,Marine Shipping,1.35
+7,ANAT,97,188.33,187.87,178.59,98.66,195.89,Finance,Multi-Line Insurance,-0.1
+10,APA,97,32.48,26.37,24.92,15.55,41.2,Energy Minerals,Integrated Oil,1.87
+145,RYI,97,24.21,23.98,21.72,13.39,33.39,Non-Energy Minerals,Steel,-2.48
+130,OXY,97,38.25,32.26,31.3,21.62,58.77,Energy Minerals,Oil & Gas Production,-1.41
+129,OVV,97,39.94,34.8,33.31,21.07,50.87,Energy Minerals,Oil & Gas Production,-3.22
+108,MNRL,97,22.48,21.02,20.56,13.66,28.2,Miscellaneous,Investment Trusts/Mutual Funds,-4.87
+110,MOS,97,44.21,38.6,36.96,28.26,64.71,Process Industries,Chemicals: Agricultural,-4.82
+89,IMO,97,41.22,34.45,33.35,22.73,47.72,Energy Minerals,Integrated Oil,-2.41
+26,CHK,97,69.53,63.79,61.23,40.0,88.75,Energy Minerals,Integrated Oil,-3.99
+99,LNG,97,114.84,103.32,98.88,69.56,143.4,Industrial Services,Oil & Gas Pipelines,-3.45
+176,WHD,97,46.91,41.11,40.26,27.26,64.18,Industrial Services,Oilfield Services/Equipment,0.55
+107,MGY,97,21.02,18.94,17.78,10.29,25.21,Energy Minerals,Oil & Gas Production,-1.13
+171,VNOM,97,26.43,22.82,21.69,14.24,30.86,Energy Minerals,Integrated Oil,0.52
+157,TECK,97,33.66,28.31,26.88,17.31,41.93,Non-Energy Minerals,Other Metals/Minerals,-1.07
+156,SWCH,97,26.13,25.68,24.43,14.0,29.15,Technology Services,Information Technology Services,-0.22
+38,COP,96,86.92,72.93,69.02,47.85,104.44,Energy Minerals,Oil & Gas Production,-2.44
+163,TSEM,96,39.91,34.87,33.04,24.81,47.5,Electronic Technology,Semiconductors,0.58
+144,RXDX,96,38.36,31.39,29.28,16.11,46.12,Health Technology,Biotechnology,1.79
+54,EOG,96,106.52,88.5,85.61,62.81,122.5,Energy Minerals,Oil & Gas Production,-1.95
+62,FANG,96,125.58,105.5,100.19,65.93,142.09,Energy Minerals,Oil & Gas Production,0.0
+133,PDCE,96,57.68,50.89,49.08,30.25,72.9,Energy Minerals,Oil & Gas Production,-3.22
+73,GLNG,96,14.58,12.96,12.86,9.26,19.32,Transportation,Marine Shipping,3.59
+42,CRC,96,42.48,40.63,37.92,21.79,47.18,Energy Minerals,Oil & Gas Production,3.25
+96,KRP,96,14.9,13.49,13.03,9.77,17.1,Miscellaneous,Investment Trusts/Mutual Funds,2.79
+11,APR,96,36.12,34.56,33.02,21.65,40.0,Health Services,Medical/Nursing Services,0.0
+122,NTR,96,75.68,69.11,66.81,52.28,101.63,Process Industries,Chemicals: Agricultural,-4.61
+136,PTEN,96,11.27,9.25,9.24,6.07,17.09,Industrial Services,Contract Drilling,-1.56
+93,KBR,95,46.68,43.34,42.23,30.95,56.07,Technology Services,Information Technology Services,-2.63
+47,CVX,95,132.65,114.31,110.89,92.86,174.0,Energy Minerals,Integrated Oil,5.24
+160,THC,95,79.93,74.74,73.14,49.15,91.89,Health Services,Hospital/Nursing Management,-0.76
+39,COST,95,519.62,496.86,472.25,312.71,571.49,Retail Trade,Department Stores,-0.98
+40,CPE,95,53.06,48.34,48.11,25.32,66.12,Energy Minerals,Oil & Gas Production,0.49
+95,KR,95,46.76,43.67,42.32,34.21,62.58,Retail Trade,Food Retail,-3.65
+138,PXD,95,212.62,180.75,172.58,133.73,246.49,Energy Minerals,Oil & Gas Production,0.31
+151,SPTN,94,26.5,23.79,22.62,18.08,33.11,Distribution Services,Food Distributors,-2.43
+154,SU,94,28.08,23.71,23.32,17.1,33.61,Energy Minerals,Integrated Oil,-2.04
+153,SST,94,10.97,10.27,10.17,7.7,17.16,Finance,Financial Conglomerates,5.21
+182,XOM,94,74.15,63.78,62.39,52.1,91.5,Energy Minerals,Integrated Oil,0.76
+149,SLB,94,37.41,32.46,32.17,24.52,46.27,Industrial Services,Oilfield Services/Equipment,7.08
+80,HESM,94,29.4,26.5,25.8,20.36,35.71,Energy Minerals,Integrated Oil,0.21
+8,ANDE,94,39.87,34.92,33.5,25.2,50.4,Process Industries,Agricultural Commodities/Milling,-5.22
+76,HAL,94,29.76,24.66,24.06,17.82,39.38,Industrial Services,Oilfield Services/Equipment,1.43
+60,EVA,94,71.02,63.69,60.14,46.93,80.55,Process Industries,Industrial Specialties,0.83
+27,CIVI,94,52.7,49.64,48.35,29.62,59.65,Energy Minerals,Integrated Oil,-0.11
+5,AMPH,94,25.66,21.73,21.32,16.91,30.92,Health Technology,Pharmaceuticals: Other,-2.7
+181,XENE,93,30.02,26.35,24.35,14.65,36.42,Health Technology,Biotechnology,0.79
+120,NOC,93,398.19,375.17,372.05,295.87,490.82,Electronic Technology,Aerospace & Defense,-6.01
+131,PANW,93,523.84,497.06,467.16,311.56,598.96,Electronic Technology,Computer Communications,-1.57
+135,PSXP,93,41.58,37.48,37.34,28.43,46.25,Industrial Services,Oil & Gas Pipelines,1.89
+104,MCK,93,260.75,227.09,218.48,176.01,283.66,Distribution Services,Medical Distributors,-2.04
+92,ITCI,93,49.38,41.7,41.16,28.4,59.88,Health Technology,Biotechnology,1.33
+44,CTRA,93,21.7,19.71,18.66,14.28,27.93,Energy Minerals,Integrated Oil,-3.67
+90,INVA,93,17.43,16.8,15.93,11.15,20.48,Health Technology,Pharmaceuticals: Other,1.38
+57,ESLT,93,177.18,158.34,151.16,122.85,216.87,Electronic Technology,Aerospace & Defense,-7.09
+61,EXC,93,41.13,37.67,36.2,28.92,44.73,Utilities,Electric Utilities,-0.78
+51,DCP,93,29.65,28.4,28.18,20.26,36.71,Industrial Services,Oil & Gas Pipelines,3.04
+72,GEL,93,11.38,10.35,10.34,7.49,13.48,Industrial Services,Oil & Gas Pipelines,0.16
+88,IMKTA,92,83.07,75.16,71.38,56.95,93.74,Retail Trade,Food Retail,0.32
+179,WMB,92,29.48,27.25,26.81,22.59,34.39,Industrial Services,Oil & Gas Pipelines,-1.62
+23,CENX,92,18.96,15.42,14.76,10.39,30.36,Non-Energy Minerals,Aluminum,-9.13
+41,CQP,92,47.78,43.0,42.48,38.0,61.82,Industrial Services,Oil & Gas Pipelines,-1.57
+128,OTTR,92,63.29,60.87,57.68,43.21,71.89,Utilities,Electric Utilities,1.81
+68,FLR,92,22.55,20.25,19.61,14.41,28.44,Industrial Services,Engineering & Construction,4.5
+18,BKR,92,27.6,24.96,24.37,18.75,36.92,Industrial Services,Oilfield Services/Equipment,0.06
+155,SUN,92,42.37,39.04,38.02,30.83,46.95,Distribution Services,Wholesale Distributors,2.16
+70,GD,91,215.22,204.09,199.97,168.38,254.99,Electronic Technology,Aerospace & Defense,-4.84
+36,CNXC,91,187.77,178.7,173.21,125.6,208.48,Commercial Services,Miscellaneous Commercial Services,2.1
+127,OKE,91,61.61,58.73,57.04,47.01,69.9,Industrial Services,Oil & Gas Pipelines,-2.58
+65,FHN,91,18.47,16.96,16.93,14.67,24.24,Finance,Regional Banks,-0.21
+152,SSRM,91,17.76,16.95,16.87,13.68,22.11,Non-Energy Minerals,Precious Metals,0.76
+137,PVG,91,14.13,12.32,11.72,8.29,15.65,Non-Energy Minerals,Precious Metals,-1.31
+112,MPLX,91,31.48,29.09,28.48,24.27,34.41,Industrial Services,Oil & Gas Pipelines,1.48
+1,ABBV,91,139.69,122.06,119.5,102.05,151.25,Health Technology,Pharmaceuticals: Major,-1.54
+174,WES,91,24.25,21.57,21.21,17.26,27.29,Energy Minerals,Oil Refining/Marketing,1.37
+3,ADM,91,73.61,65.98,64.77,55.26,87.99,Process Industries,Agricultural Commodities/Milling,-1.0
+148,SFL,91,8.83,8.22,8.04,6.67,10.66,Transportation,Marine Shipping,1.26
+103,MATX,91,93.66,85.89,80.36,59.65,112.39,Transportation,Marine Shipping,0.91
+19,BSM,91,11.34,10.98,10.66,8.37,12.75,Energy Minerals,Oil & Gas Production,0.56
+143,RTLR,90,12.33,11.35,11.05,9.51,14.33,Industrial Services,Oil & Gas Pipelines,2.3
+139,RMBS,90,26.91,25.33,24.49,17.95,29.89,Electronic Technology,Semiconductors,2.5
+166,TWNK,90,20.63,18.56,17.96,14.21,22.72,Consumer Non-Durables,Food: Specialty/Candy,-4.01
+77,HCA,90,247.91,246.81,239.81,181.91,269.75,Health Services,Hospital/Nursing Management,-0.69
+97,LHX,90,224.43,224.21,223.1,186.2,279.71,Electronic Technology,Aerospace & Defense,-3.28
+109,MOH,90,301.18,289.51,280.62,217.35,328.11,Health Services,Managed Health Care,-1.04
+111,MPC,90,73.25,65.08,63.22,50.19,81.39,Energy Minerals,Oil Refining/Marketing,2.25
+33,CNP,89,27.46,26.46,26.03,20.59,29.05,Utilities,Electric Utilities,-0.66
+118,NFG,89,62.04,57.85,56.23,47.85,67.58,Energy Minerals,Integrated Oil,-1.74
+119,NI,89,28.26,25.92,25.61,21.86,30.54,Utilities,Gas Distributors,-1.66
+132,PBA,89,32.11,31.18,31.02,27.63,37.34,Industrial Services,Oil & Gas Pipelines,-0.38
+63,FCX,89,42.53,38.43,38.19,29.45,50.46,Non-Energy Minerals,Other Metals/Minerals,-1.02
+43,CSGS,88,58.84,53.26,51.27,42.58,65.94,Technology Services,Data Processing Services,-1.26
+86,HSY,88,199.11,184.36,181.49,149.05,216.36,Consumer Non-Durables,Food: Specialty/Candy,-4.39
+147,SCHL,88,41.6,37.82,37.39,27.86,43.71,Consumer Services,Publishing: Books/Magazines,-1.54
+52,DLTR,88,136.83,118.6,113.97,84.26,151.28,Retail Trade,Discount Stores,4.22
+37,COOP,88,44.45,42.17,40.15,30.53,52.34,Finance,Finance/Rental/Leasing,-1.27
+9,ANTM,88,451.44,416.41,408.37,329.75,477.47,Health Services,Managed Health Care,0.34
+17,BG,88,98.59,88.52,86.19,71.73,112.63,Process Industries,Agricultural Commodities/Milling,-2.24
+162,TSCO,88,218.52,211.78,204.12,160.46,239.86,Retail Trade,Specialty Stores,-3.6
+81,HLLY,88,12.48,12.06,11.62,9.24,14.04,Producer Manufacturing,Auto Parts: OEM,-0.44
+59,EURN,88,9.57,9.34,9.28,7.55,12.16,Transportation,Marine Shipping,0.77
+134,PSTG,88,27.88,27.04,25.09,16.79,35.09,Electronic Technology,Computer Peripherals,0.76
+173,VTOL,87,32.95,32.66,31.22,24.82,40.1,Transportation,Other Transportation,-3.33
+64,FE,87,41.29,38.83,38.33,33.64,44.98,Utilities,Electric Utilities,-0.58
+4,AGO,86,55.21,51.78,50.49,41.1,63.98,Finance,Specialty Insurance,-4.19
+158,TENB,86,51.01,49.43,47.71,35.32,57.7,Technology Services,Packaged Software,0.31
+31,CMC,86,36.12,33.65,33.0,26.98,40.56,Non-Energy Minerals,Steel,-0.1
+2,ABC,86,137.02,126.45,123.8,107.72,148.42,Distribution Services,Medical Distributors,-0.3
+32,CNC,86,81.07,72.91,72.79,59.33,86.81,Health Services,Managed Health Care,-2.3
+35,CNX,86,15.5,13.89,13.79,10.41,18.78,Energy Minerals,Integrated Oil,-1.09
+24,CERN,86,92.27,80.96,80.47,69.08,93.63,Technology Services,Information Technology Services,-0.04
+180,WMK,85,63.24,59.49,57.54,49.66,76.29,Retail Trade,Food Retail,2.53
+84,HRMY,85,38.55,37.82,35.88,25.09,45.89,Health Technology,Pharmaceuticals: Major,2.84
+15,ARNA,85,92.91,71.19,69.66,45.5,98.75,Health Technology,Biotechnology,5.36
+49,CWEN,84,33.13,33.01,31.34,24.93,39.75,Utilities,Alternative Power Generation,3.97
+21,CACI,84,267.13,266.78,265.36,220.37,309.8,Technology Services,Information Technology Services,-3.79
+85,HSIC,84,79.15,77.42,77.27,64.76,88.62,Distribution Services,Medical Distributors,-3.04
+16,ATO,84,106.11,97.6,97.52,85.8,116.81,Utilities,Gas Distributors,-2.25
+164,TSN,84,91.56,83.33,80.82,69.88,100.72,Consumer Non-Durables,Food: Meat/Fish/Dairy,-0.26
+48,CW,83,138.83,130.7,128.29,111.26,162.98,Electronic Technology,Aerospace & Defense,-3.59
+98,LLY,83,250.52,249.99,243.62,178.58,283.9,Health Technology,Pharmaceuticals: Major,-0.65
+67,FLOW,83,85.8,81.36,78.18,60.59,88.55,Producer Manufacturing,Industrial Machinery,0.13
+165,TU,82,24.22,23.07,22.77,19.74,26.48,Communications,Major Telecommunications,-2.21
+172,VST,82,22.07,20.04,19.51,15.47,23.49,Utilities,Electric Utilities,1.3
+142,RS,82,166.0,156.41,156.35,135.46,194.91,Non-Energy Minerals,Steel,-1.45
+79,HEES,82,41.6,39.88,38.1,28.28,50.69,Finance,Finance/Rental/Leasing,8.52
+125,NXST,81,167.19,156.57,153.65,135.11,190.94,Consumer Services,Broadcasting,3.22
+106,MEOH,81,46.53,43.31,40.99,29.61,55.25,Process Industries,Chemicals: Specialty,-5.23
+170,VLO,81,82.92,73.89,73.46,58.85,93.77,Energy Minerals,Oil Refining/Marketing,7.77
+105,MCRI,80,71.25,68.99,68.37,56.35,83.22,Consumer Services,Hotels/Resorts/Cruise lines,2.03
+69,GATX,79,103.79,97.45,95.7,84.5,118.11,Transportation,Railroads,0.65
+94,KNSL,79,206.32,192.5,185.93,153.12,245.17,Finance,Multi-Line Insurance,0.23
+177,WLK,78,103.1,95.87,94.73,78.06,113.53,Process Industries,Chemicals: Specialty,-0.35
+28,CLBK,78,21.14,19.58,19.02,16.34,21.99,Finance,Savings Banks,-1.66
+169,VIRT,78,31.58,27.74,27.61,23.19,36.7,Finance,Investment Banks/Brokers,-1.08
+55,EPAY,77,56.51,48.15,45.63,36.05,56.8,Technology Services,Packaged Software,0.19
+159,TGNA,76,20.25,19.55,19.21,16.42,23.04,Consumer Services,Broadcasting,0.05
+45,CTSH,76,86.94,80.84,78.0,66.19,92.44,Technology Services,Information Technology Services,1.02
+124,NVEE,75,115.15,110.61,106.08,79.58,141.48,Industrial Services,Engineering & Construction,-3.27
+115,MTOR,72,27.06,25.43,25.1,20.5,36.24,Producer Manufacturing,Auto Parts: OEM,1.17
+117,NCBS,72,91.83,80.56,78.72,68.07,96.68,Finance,Regional Banks,0.52

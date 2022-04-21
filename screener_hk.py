@@ -55,9 +55,9 @@ index_return = (index_df["Percent Change"] + 1).cumprod()[-1]
 # Find top 30% performing stocks (relative to the S&P 500)
 for ticker in tickers:
     # Download historical data as CSV for each stock (makes the process faster)
-    # df = pdr.get_data_yahoo(ticker, start_date, end_date)
-    # df.to_csv(f"stocks_hk/{ticker}.csv")
-    df = pd.read_csv(f"stocks_hk/{ticker}.csv", index_col=0)
+    df = pdr.get_data_yahoo(ticker, start_date, end_date)
+    df.to_csv(f"stocks_hk/{ticker}.csv")
+    # df = pd.read_csv(f"stocks_hk/{ticker}.csv", index_col=0)
 
     # Calculating returns relative to the market (returns multiple)
     df["Percent Change"] = df["Adj Close"].pct_change()
@@ -67,7 +67,7 @@ for ticker in tickers:
     returns_multiples.extend([returns_multiple])
 
     print(f"Ticker: {ticker}; Returns Multiple against S&P 500: {returns_multiple}\n")
-    time.sleep(1)
+    # time.sleep(1)
 
 # Creating dataframe of only top 30%
 rs_df = pd.DataFrame(
@@ -149,7 +149,8 @@ for stock in rs_stocks:
         print(f"Could not gather data on {stock}")
 
 exportList = exportList.sort_values(by="RS_Rating", ascending=False)
-print("\n", exportList)
-writer = ExcelWriter("ScreenOutput.xlsx")
-exportList.to_excel(writer, "Sheet1")
-writer.save()
+exportList.to_csv("ScreenOutput.csv")
+# print("\n", exportList)
+# writer = ExcelWriter("ScreenOutput.xlsx")
+# exportList.to_excel(writer, "Sheet1")
+# writer.save()
