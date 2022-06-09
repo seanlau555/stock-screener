@@ -44,7 +44,7 @@ def run(firstRun=False):
             "150 Day MA",
             "200 Day MA",
             "52 Week Low",
-            "52 week High",
+            "52 Week High",
             "Sector",
             "Industry",
             "Daily_change",
@@ -193,7 +193,7 @@ def run(firstRun=False):
                         "150 Day MA": moving_average_150,
                         "200 Day MA": moving_average_200,
                         "52 Week Low": low_of_52week,
-                        "52 week High": high_of_52week,
+                        "52 Week High": high_of_52week,
                         "Sector": Sector,
                         "Industry": Industry,
                         "Daily_change": Daily_change,
@@ -207,9 +207,9 @@ def run(firstRun=False):
             print(f"Could not gather data on {stock}")
 
     exportList = exportList.sort_values(by="RS_Rating", ascending=False)
-    # addTable("table_us", exportList, latest_date)
+    addTable("table_us", exportList, latest_date)
     exportList.to_csv("ScreenOutput.csv")
     print("\n", exportList)
 
 
-run(True)
+run(False)
